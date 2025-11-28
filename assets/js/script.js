@@ -1,4 +1,3 @@
-import Prism from 'prismjs';
 import $ from 'jquery';
 
 /*
@@ -255,20 +254,6 @@ const siblingPosts = {
 	}
 }
 
-
-/*
- * ----------------------------------------------------------------
- * Syntax Highlighting
- * ----------------------------------------------------------------
- */
-
-const highlight = {
-	init: function () {
-		const container = document.querySelector('.post-full-content');
-		if (container) Prism.highlightAllUnder(container);
-	}
-}
-
 /*
  * ----------------------------------------------------------------
  * Stupid Random Taglines
@@ -291,6 +276,5 @@ const taglines = {
  */
 $(document).ready(function() {
     siblingPosts.init();
-	highlight.init();
 	taglines.init();
 });

@@ -6,10 +6,10 @@ const notify   = require('gulp-notify')
 const zip      = require('gulp-zip')
 const postcss  = require('gulp-postcss')
 const rollup   = require('rollup')
-const babel    = require('rollup-plugin-babel')
-const commonjs = require('rollup-plugin-commonjs')
-const resolve  = require('rollup-plugin-node-resolve')
-const { terser } = require('rollup-plugin-terser')
+const babel    = require('@rollup/plugin-babel')
+const commonjs = require('@rollup/plugin-commonjs')
+const resolve  = require('@rollup/plugin-node-resolve')
+const { terser } = require('@rollup/plugin-terser')
 
 function styles() {
 	const processors = [
@@ -50,29 +50,22 @@ const read = {
 		commonjs(),
 		babel({
 			babelrc: false,
+			babelHelpers: 'bundled',
 			presets: [
 				[
 					'@babel/preset-env'
 				]
             ],
-            plugins: [
-                ["prismjs", {
-                    "languages": ["javascript", "css", "markup", "csharp", "python"]
-                }]
-            ]
 		}),
 
 	]
 }
 
 const write = {
-	output: {
-		file: 'assets/built/script.min.js',
-		name: 'script',
-		format: 'iife',
-		sourcemap: true,
-	},
-	plugins: [],
+	file: 'assets/built/script.min.js',
+	name: 'script',
+	format: 'iife',
+	sourcemap: true,
 }
 
 async function scripts() {
