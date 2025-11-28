@@ -1,4 +1,4 @@
-name: Publish Website
+name: Publish Theme
 
 on:
   push:
@@ -6,11 +6,16 @@ on:
       - main
   workflow_dispatch:
 jobs:
-  Publish-Website:
-    name: Publish-Website
+  Publish-Theme:
+    name: Publish-Theme
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+      - uses: actions/setup-node@v1
+      - name: Build Theme
+        run: |
+          npm install
+          npm run build
       - name: Upload the artifact
         uses: actions/upload-artifact@v4
         with:
