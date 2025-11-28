@@ -1,0 +1,27 @@
+.widget-area {
+    margin-top: 2rem;
+}
+
+.widget {
+    margin-bottom: 1.5rem;
+}
+
+.widget-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.widget ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.widget ul li {
+    margin-bottom: 0.5rem;
+}
+
+.widget a {
+    text-decoration: none;
+}

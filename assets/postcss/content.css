@@ -63,3 +63,7 @@
 .sd-title, .share-customize-link {
     display: none !important;
 }
+
+.sd-sharing {
+    margin-bottom: 0 !important;
+}

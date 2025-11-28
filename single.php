@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <header class="site-header-row">
-    <div class="logo-block">
+    <div class="logo-block magical-rainbow">
         <div class="logo-column">
             <h1 class="site-title">
                 <a href="<?= get_bloginfo( 'url' ); ?>">

@@ -2,7 +2,7 @@
 
 <div class="columns is-fullheight">
     <header class="column site-header-column">
-        <div class="logo-block">
+        <div class="logo-block magical-rainbow">
             <div class="logo-column">
                 <h1 class="site-title">
                     <a href="<?= get_bloginfo( 'url' ); ?>">
@@ -22,9 +22,9 @@
 
         <?php get_template_part( 'partials/site-nav' ); ?>
 
-        <section class="about-this-site">
-            <?php /* {{meta_description}} */ ?>
-        </section>
+        <aside id="secondary" class="widget-area">
+            <?php dynamic_sidebar( 'sidebar-1' ); ?>
+        </aside>
     </header>
     <main class="column site-content-column">
         <?php if ( have_posts() ) : ?>

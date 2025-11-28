@@ -58,10 +58,6 @@ a:active {
     margin-right: 4rem;
 }
 
-.site {
-
-}
-
 .site-description {
     font-family: var(--subtitle-font);
     color: #d4d4d4;
@@ -76,10 +72,6 @@ a:active {
 }
 
 .logo-block {
-    background: linear-gradient(119deg, #071017, #283c47, #466466, #382044, #53644d, #4b4b4b, #0b4057, #674a64, #071017);
-    background-size: 1600% 1600%;
-    animation: UmbralGradient 60s ease infinite;
-
     width: 100vw;
     position: absolute !important;
     right: 0;
@@ -104,6 +96,12 @@ a:active {
         /* fullHD */
         width: calc(50vw + 320px - 679px);
     }
+}
+
+.magical-rainbow {
+    background: linear-gradient(119deg, #071017, #283c47, #466466, #382044, #53644d, #4b4b4b, #0b4057, #674a64, #071017);
+    background-size: 1600% 1600%;
+    animation: UmbralGradient 60s ease infinite;
 }
 
 @keyframes UmbralGradient {
