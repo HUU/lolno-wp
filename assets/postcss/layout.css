@@ -1,0 +1,395 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background: url('../images/topography_pattern.png') repeat-y;
+    background-color: var(--page-background);
+    background-position: calc(100vw - var(--right-pattern-width));
+    font-family: var(--system-font);
+    padding-right: var(--right-pattern-width);
+}
+
+body.post-template {
+    background: url('../images/topography_pattern.png') repeat-y;
+    background-position: calc(100vw - var(--right-pattern-width)) top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--header-font);
+    color: var(--not-quite-black);
+
+    a, a:visited {
+        color: var(--not-quite-black);
+    }
+
+    a:hover {
+        color: var(--accent-color);
+    }
+
+    a:active {
+        color: var(--dark-accent-color);
+    }
+}
+
+a, a:visited {
+    color: var(--accent-color);
+}
+
+a:hover {
+    color: var(--dark-accent-color);
+}
+
+a:active {
+    color: var(--bright-accent-color);
+}
+
+.is-fullheight {
+    height: 100%;
+    min-height: 100vh;
+}
+
+.columns {
+    margin: 0 !important;
+}
+
+.has-mr-xl {
+    margin-right: 4rem;
+}
+
+.site {
+
+}
+
+.site-description {
+    font-family: var(--subtitle-font);
+    color: #d4d4d4;
+    text-transform: lowercase;
+    font-size: 1.1em;
+    line-height: 1em;
+    padding-top: 1em;
+}
+
+.site-nav {
+    margin-bottom: 3rem;
+}
+
+.logo-block {
+    background: linear-gradient(119deg, #071017, #283c47, #466466, #382044, #53644d, #4b4b4b, #0b4057, #674a64, #071017);
+    background-size: 1600% 1600%;
+    animation: UmbralGradient 60s ease infinite;
+
+    width: 100vw;
+    position: absolute !important;
+    right: 0;
+    top: 0;
+
+    .logo-column {
+        width: 320px;
+        float: right;
+        padding: 2rem 2rem 2rem 0.75rem;
+    }
+
+    .site-logo {
+        animation: LogoChroma 60s ease infinite;
+    }
+
+    @media screen and (min-width: 1216px) and (max-width: 1407px) {
+        /* widescreen */
+        width: calc(50vw + 320px - 583px);
+    }
+
+    @media screen and (min-width: 1408px) {
+        /* fullHD */
+        width: calc(50vw + 320px - 679px);
+    }
+}
+
+@keyframes UmbralGradient {
+    0%{background-position:0% 15%}
+    50%{background-position:100% 86%}
+    100%{background-position:0% 15%}
+}
+
+@keyframes LogoChroma {
+    0%{filter: hue-rotate(0deg)}
+    100%{filter: hue-rotate(360deg)}
+}
+
+.site-nav ul.nav {
+    li {
+        margin-bottom: 1rem;
+        fill: var(--dark-accent-color);
+
+        &.current-menu-item a {
+            font-weight: bold;
+            color: var(--not-quite-black);
+
+            svg {
+                fill: var(--not-quite-black);
+            }
+        }
+    }
+
+    a {
+        text-transform: lowercase;
+        height: var(--nav-item-height);
+        color: var(--dark-accent-color);
+
+        svg {
+            fill: var(--dark-accent-color);
+        }
+
+        &:hover {
+            color: var(--accent-color);
+
+            svg {
+                fill: var(--accent-color);
+            }
+        }
+
+        &:active {
+            color: var(--bright-accent-color);
+
+            svg {
+                fill: var(--bright-accent-color);
+            }
+        }
+    }
+
+    svg {
+        height: 1.35em;
+        vertical-align: middle;
+        padding-right: 0.3rem;
+    }
+}
+
+.site-header-column {
+    position: relative;
+    padding-top: calc(var(--logo-height) + 9.75rem);
+    padding-right: 3.5em;
+    width: 320px;
+    flex: none;
+
+    & > * {
+        z-index: 1;
+        position: relative;
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        width: 100vw;
+        height: 100%;
+        z-index: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: white;
+    }
+}
+
+.site-content-row {
+    padding-bottom: 1px; /* prevent margin collapse on the bottom */
+}
+
+.site-content-column {
+    background: var(--page-background);
+    padding-top: calc(var(--space-between-page-top-and-content) + var(--logo-height) * 0.5);
+    padding-left: 5rem;
+    padding-bottom: 2rem;
+    position: relative;
+}
+
+.category:not(body) {
+    background-color: var(--category-background);
+    color: #fff;
+    text-transform: lowercase;
+
+    &.category-career {
+        background-color: var(--secondary-color-teal);
+        color: #fff;
+    }
+
+    &.category-management {
+        background-color: var(--secondary-color-plum);
+        color: #fff;
+    }
+
+    &.category-technology, &.category-development {
+        background-color: var(--secondary-color-yellow);
+        color: #fff;
+    }
+
+    &.category-photography {
+        background-color: var(--secondary-color-red);
+        color: #fff;
+    }
+
+    &.category-life {
+        background-color: var(--secondary-color-blue);
+        color: #fff;
+    }
+}
+
+.post-card {
+    .post-card-metadata {
+        text-transform: uppercase;
+        font-size: 0.8em;
+        color: var(--accent-color);
+    }
+
+    h2.post-card-title {
+        margin-top: 0.3rem;
+        font-size: 1.85em;
+    }
+
+    .post-card-categories {
+        margin-top: 1rem;
+    }
+
+    .post-card-image {
+        width: 240px;
+        height: 280px;
+        object-fit: cover;
+        background: var(--medium-accent-color);
+    }
+
+    &:hover {
+        background: var(--page-background);
+        transform: translatex(-5px);
+        transition:0.2s;
+
+        & .post-card-image {
+            box-shadow: var(--page-background-shadow) 0px 20px 20px 0px;
+            transition:0.3s;
+        }
+    }
+}
+
+.site-header-row {
+    width: 100%;
+    align-items: center;
+    display: flex;
+
+    @mixin horizontal-nav;
+}
+
+.post-feed {
+    margin-bottom: 3rem;
+}
+
+.pagination {
+    margin: 0 !important;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+    /* tablet */
+    .post-card .post-card-image {
+        width: 180px;
+        height: 220px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 1215px) {
+    /* mobile, tablet, desktop */
+
+    .site > .columns {
+        display: block;
+    }
+
+    .site-content-column {
+        padding-top: 0;
+        padding-left: 0;
+    }
+
+    .site-header-column {
+        width: 100%;
+        align-items: center;
+        padding: 0;
+        display: flex;
+        margin-bottom: calc(var(--space-between-page-top-and-content) / 2);
+
+        &:before {
+            display: none;
+        }
+
+        @mixin horizontal-nav;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* mobile */
+    .post-card .post-card-image {
+        display: none;
+    }
+
+    .has-mr-xl {
+        margin-right: 2rem;
+    }
+
+    body, body.post-template {
+        background-position: calc(100vw);
+        padding-right: 0;
+    }
+
+    .site {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .site-header-row, .site-header-column {
+        flex-direction: column;
+
+        .logo-block {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1215px) {
+
+    .site {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .has-mr-xl {
+        margin-right: 3rem;
+    }
+
+    body, body.post-template {
+        background-position: calc(100vw -  var(--right-pattern-width-small));
+        padding-right: var(--right-pattern-width-small);
+    }
+
+}
+
+@media screen and (min-width: 1216px) and (max-width: 1407px) {
+    /* widescreen */
+    .site-content-column {
+        padding-left: 3rem;
+    }
+
+    .post-card .post-card-image {
+        width: 200px;
+        height: 240px;
+        object-fit: cover;
+    }
+
+    .has-mr-xl {
+        margin-right: 3rem;
+    }
+
+    .site-header-column {
+        &:before {
+            background-position: calc((100vw - 1152px) * 0.5 - var(--right-pattern-width) - 398px) calc(100vh - 729px);
+        }
+    }
+}
+
+@media screen and (min-width: 1408px) {
+    /* fullHD */
+}
