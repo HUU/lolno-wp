@@ -24,6 +24,7 @@ function lolno_setup() {
 		'unlink-homepage-logo' => true, 
 	));
     add_theme_support( 'align-wide' );
+	add_theme_support( 'custom-spacing' );
 }
 add_action( 'after_setup_theme', 'lolno_setup' );
 
